@@ -1,6 +1,5 @@
 pipleline{
   agent any
-
   stages{
     stage('Build'){
     steps{
@@ -8,7 +7,6 @@ pipleline{
       sh './gradlew build --no-daemon'
       archiveArtifacts artifacts: 'dist/JS-App.zip'
       }
-    
     }
   }
 }
